@@ -1,0 +1,211 @@
+:root {
+  --section-color: #006af1;
+}
+body,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.loading {
+  opacity: 0.4;
+}
+.not-available {
+  display: none;
+}
+header {
+  height: 50px;
+  background-color: #3c3c3c;
+  display: flex;
+  padding: 0 24px;
+}
+header .logo {
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+}
+header .logo::before {
+  content: '';
+  width: 35px;
+  height: 35px;
+  background: url('images/logo.png') no-repeat center;
+  background-size: cover;
+  margin-right: 8px;
+}
+.not-jira-site .popup-content {
+  display: none;
+}
+.not-jira-site .not-available {
+  display: block;
+}
+
+/* form elments */
+fieldset {
+  border: 0;
+}
+[type='number'] {
+  height: 20px;
+  margin: 0 5px;
+}
+
+button {
+  border: solid 1px;
+  min-width: 80px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background: var(--button-bg-color-normal);
+  border: var(--button-border-color-normal);
+}
+button:hover {
+  background: var(--button-bg-color-hover);
+}
+button:active {
+  background: var(--button-bg-color-active);
+  border-color: var(--button-border-color-active);
+  box-shadow: inset 0 0 1px var(--button-shadow-color-active);
+}
+button:focus {
+  outline: solid 1px var(--button-bg-color-focus);
+}
+
+button[type='submit'] {
+  --button-bg-color-normal: #3b91ef;
+  --button-border-color-normal: #0056b7;
+  --button-bg-color-hover: #64adfb;
+  --button-bg-color-active: #2771c3;
+  --button-border-color-active: #001936;
+  --button-shadow-color-active: #004b6e;
+  --button-bg-color-focus: #001936;
+}
+button.clear-cache {
+  --button-bg-color-normal: #d30000;
+  --button-border-color-normal: #bd0000;
+  --button-bg-color-hover: #eb1414;
+  --button-bg-color-active: #b50000;
+  --button-border-color-active: #000000;
+  --button-shadow-color-active: #a30404;
+  --button-bg-color-focus: #000000;
+}
+
+[disabled='disabled'] button {
+  --button-bg-color-normal: #9b9b9b;
+  --button-border-color-normal: #9b9b9b;
+  --button-bg-color-hover: #9b9b9b;
+  --button-bg-color-active: #9b9b9b;
+  --button-border-color-active: #9b9b9b;
+  --button-shadow-color-active: #9b9b9b;
+  --button-bg-color-focus: #9b9b9b;
+}
+
+/* page */
+.popup-content {
+  width: 421px;
+  padding: 24px;
+}
+.option-box {
+  border-bottom: solid 1px #e5e5e5;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+}
+.option-box .option {
+  display: inline-block;
+}
+.option-box .option:nth-child(2) {
+  width: 50%;
+}
+.option-box p {
+  margin: 0 0 12px 0;
+  color: var(--section-color);
+  font-weight: bold;
+}
+
+.color-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.color-box p {
+  color: var(--section-color);
+  font-weight: bold;
+}
+
+.color-box input {
+  width: 26px;
+  height: 26px;
+  appearance: none;
+}
+.color-box input::before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: linear-gradient(
+    45deg,
+    var(--color-primary) 50%,
+    var(--color-secondary) 50%
+  );
+  transition: box-shadow 0.1s, opacity 0.2s;
+}
+.color-box input:hover::before {
+  opacity: 0.8;
+}
+.color-box input:checked::before {
+  box-shadow: 0 0 0px 3px #fff, 0 0 0px 5px #52abf9;
+}
+.color-box input[value='default'] {
+  --color-primary: #add8fd;
+  --color-secondary: #f3f3d3;
+}
+.color-box input[value='dark'] {
+  --color-primary: #000;
+  --color-secondary: #6d8295;
+}
+.color-box input[value='lightPurple'] {
+  --color-primary: #4d6eaf;
+  --color-secondary: #929eec;
+}
+.color-box input[value='lightGreen'] {
+  --color-primary: rgb(79, 216, 216);
+  --color-secondary: #c5fbe0;
+}
+.action-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-done .done-indicator {
+  opacity: 1;
+}
+.done-indicator {
+  opacity: 0;
+  color: #02a509;
+  padding: 10px 15px;
+  border-radius: 32px;
+  transition: opacity 0.3s;
+}
+.done-indicator::before {
+  content: '✓';
+  margin-right: 4px;
+}
+
+.not-available {
+  width: 200px;
+  padding: 30px;
+  border: solid 3px #eb1414;
+  color: #eb1414;
+  font-weight: bold;
+}

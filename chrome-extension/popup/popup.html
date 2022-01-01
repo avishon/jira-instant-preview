@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="loading">
+    <header>
+      <div class="logo">Jira Instant Preview</div>
+    </header>
+    <div class="popup-content">
+      <form method="post" class="options-form">
+        <fieldset disabled="disabled">
+          <div class="option-box">
+            <p>Hide the popup when</p>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="hideDialogOnPageContentLoaded"
+                name="hideDialogOnPageContentLoaded"
+                value="true"
+              />
+
+              <label for="hideDialogOnPageContentLoaded"
+                >Full page has loaded</label
+              >
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                id="hideDialogOnMouseMove"
+                name="hideDialogOnMouseMove"
+                value="true"
+              />
+              <label for="hideDialogOnMouseMove">Mouse moves</label>
+            </div>
+          </div>
+
+          <div class="option-box">
+            <p>Show the popup:</p>
+            <div class="option">
+              <input
+                type="radio"
+                id="showDialogForCacheOnly1"
+                name="showDialogForCacheOnly"
+                value="true"
+              />
+              <label for="showDialogForCacheOnly1">Only if cache exists</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="showDialogForCacheOnly2"
+                name="showDialogForCacheOnly"
+                value="false"
+              />
+              <label for="showDialogForCacheOnly2">Show anyway</label>
+            </div>
+          </div>
+          <div class="option-box">
+            <p>On the popup, first show:</p>
+            <div class="option">
+              <input
+                type="radio"
+                id="showCommentsAtTop1"
+                name="showCommentsAtTop"
+                value="false"
+              />
+              <label for="showCommentsAtTop1">The description</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="showCommentsAtTop2"
+                name="showCommentsAtTop"
+                value="true"
+              />
+              <label for="showCommentsAtTop2">The comments</label>
+            </div>
+          </div>
+          <div class="option-box">
+            <p>On comments section, show:</p>
+            <div class="option">
+              <input
+                type="radio"
+                id="commentOrderNewFirst1"
+                name="commentOrderNewFirst"
+                value="false"
+              />
+              <label for="commentOrderNewFirst1">Older comments first</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="commentOrderNewFirst2"
+                name="commentOrderNewFirst"
+                value="true"
+              />
+              <label for="commentOrderNewFirst2">Newer comments first</label>
+            </div>
+          </div>
+          <div class="option-box">
+            <p>Cache limit</p>
+
+            Max
+            <input
+              type="number"
+              id="cacheMaxKb"
+              name="cacheMaxKb"
+              min="60000"
+            />
+            KB
+          </div>
+          <div class="color-box">
+            <p>Theme color:</p>
+            <div class="color-item">
+              <input
+                type="radio"
+                id="themeColor1"
+                name="themeColor"
+                value="default"
+              />
+            </div>
+            <div class="color-item">
+              <input
+                type="radio"
+                id="themeColor2"
+                name="themeColor"
+                value="dark"
+              />
+            </div>
+            <div class="color-item">
+              <input
+                type="radio"
+                id="themeColor3"
+                name="themeColor"
+                value="lightPurple"
+              />
+            </div>
+            <div class="color-item">
+              <input
+                type="radio"
+                id="themeColor4"
+                name="themeColor"
+                value="lightGreen"
+              />
+            </div>
+          </div>
+
+          <div class="action-box">
+            <button type="submit">Save</button>
+            <div class="done-indicator">Done</div>
+            <button type="button" class="clear-cache">Clear cache</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="not-available">
+      You can modify the options on the Jira site only
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
