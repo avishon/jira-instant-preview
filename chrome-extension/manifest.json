@@ -3,9 +3,6 @@
   "description": "Speeds up Jira ticket (issue) loading time by using a cache",
   "version": "1.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
   "content_scripts": [
     {
       "matches": ["https://*.atlassian.net/*"],
