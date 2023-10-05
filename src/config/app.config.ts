@@ -25,5 +25,5 @@ export const AppConfig = {
   },
   USER_CONFOG_LOCAL_STORAGE_KEY: 'jiraChromeExtensionUserConfig',
   JIRA_ISSUE_TITLE_SELECTOR:
-    '[data-test-id="issue.views.issue-base.foundation.summary.heading"]',
+    '[data-test-id="issue.views.issue-base.foundation.summary.heading"],[data-testid="issue.views.issue-base.foundation.summary.heading"]',
 };
